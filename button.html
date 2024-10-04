@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Button Color Change</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+        }
+
+        #red-btn {
+            background-color: red;
+            color: white;
+            width: 150px;
+            display: block;
+            margin: 80px;
+            height: 50px;
+        }
+
+        #blue-btn {
+            background-color: blue;
+            color: white;
+            width: 150px;
+            display: block;
+            margin:80px;
+            height:50px;
+        }
+
+        #green-btn {
+            background-color: green;
+            color: white;
+            width:150px;
+            display:block;
+            margin:80px;
+            height:50px
+        }
+
+        #reset-btn {
+            display: block;
+            background-color: transparent;
+            color: rgb(149, 35, 130);
+            margin:50px;
+            width:220px;
+            height:50px
+        }
+        #red-btn:hover{
+            color: rgb(25, 209, 209);
+            font-size: 40px;
+            font-family: fantasy;
+            width: 250px;
+            height:50px;
+            
+            transition: 5s;
+            
+           
+        }
+        #blue-btn:hover{
+            color: rgb(132, 8, 37);
+            font-size: 40px;
+            font-family: fantasy;
+            width: 250px;
+            height:50px;
+            
+            transition: 5s;
+            
+           
+        }
+        #green-btn:hover{
+            color: rgb(89, 8, 132);
+            font-size: 40px;
+            font-family: fantasy;
+            width: 250px;
+            height:50px;
+            
+            transition: 5s;
+            
+           
+        }
+        
+        
+
+    </style>
+</head>
+<body>
+    <center>
+    <h1>BACKGROUND COLOR CHANGING BUTTONS</h1>
+    
+    <button id="red-btn" width="30px" onclick="changeColor('red')">Red</button>
+    <button id="blue-btn" onclick="changeColor('blue')">Blue</button>
+    <button id="green-btn" onclick="changeColor('green')">Green</button>
+    <button id="reset-btn" onclick="resetColor()">Reset</button>
+    </center>
+    <script>
+  
+        const initialBackgroundColor = document.body.style.backgroundColor;
+        function changeColor(color) {
+            document.body.style.backgroundColor = color;
+            document.getElementsByTagName("button").style.color= initialBackgroundColor;
+        }
+        function resetColor() {
+            document.body.style.backgroundColor = initialBackgroundColor;
+        }
+    </script>
+
+</body>
+</html>
